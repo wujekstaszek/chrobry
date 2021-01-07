@@ -1,4 +1,4 @@
 django
 gunicorn
 django-heroku
-django-neomodel
+django-neomodel=3.3.2
