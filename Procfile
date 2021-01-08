@@ -1,1 +1,1 @@
-web: gunicorn chrobry:chrobry --log-file -
+web: gunicorn pdwco.wsgi --log-file -
