@@ -1,1 +1,1 @@
-web: gunicorn chrobry --log-file -
+web: gunicorn chrobry:chrobry --log-file -
