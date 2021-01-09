@@ -25,7 +25,6 @@ SECRET_KEY = 'm-tvrliz0#t+)lo7is^c)m7rdsy%@r@73#gb1%7(91*441g6!r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 import os
 NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL', 'bolt://u7morgala:297892@149.156.109.37:7687')
@@ -118,7 +117,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-ALLOWED_HOSTS = ["chrobry.herokuapp.com"]
+ALLOWED_HOSTS = ["chrobry.herokuapp.com","127.0.0.1"]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 

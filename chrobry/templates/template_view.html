@@ -1,0 +1,48 @@
+<head>
+		{% load static %}
+	  <link rel="stylesheet" type="text/css" href="{%static 'chrobry/styles.css'%}">
+</head>
+
+
+<div class="head">
+	<img src="{%static 'chrobry/logo.png'%}">
+</div>
+
+<body>
+	<h1>{{title}}</h1>
+	<ul>
+		{%for selected_data in selected.details%}
+		<li>{{selected_data.0}}{{selected_data.1}}</li>
+		{%endfor%}
+	</ul>
+
+<div class="data">
+
+	{%for all_data in dataset%}
+	<ul>
+		{% if all_data.data%}
+			<h3>{{all_data.title}}:</h3>
+				{%for data in all_data.data%}
+				<li><a href="{{data.url}}">{{data}}</a></li>
+				{%endfor%}
+			</ul>
+		{%endif%}
+	{%endfor%}
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button><a class="go_back_button" href="/">go back</a></button>

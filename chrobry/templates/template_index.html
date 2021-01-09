@@ -1,0 +1,62 @@
+<head>
+	{% load static %}
+	  <link rel="stylesheet"  type="text/css" href="{%static 'chrobry/styles.css'%}">
+</head>
+
+
+<div class="head">
+
+	<img src="{%static 'chrobry/logo.png'%}">
+</div>
+
+<body>
+	<h1>Witamy w projekcie Chrobry!</h1>
+	<h2>Wybierz interesujące cię dane:</h2>
+<div class="data">
+		<h3> Szpitale:</h3>
+		<form id="hospital" action="{% url 'chrobry:data_view'%}">
+		<input  list="hospital_datalist" name="hospital_choosment">
+			<datalist id="hospital_datalist">
+				{%for hospital in hospital_list%}
+				<option value="{{hospital.name}}"></option>
+				{%endfor%}
+			</datalist>
+		<input type="submit" value="Wybierz">
+		</form>
+		<h3> Lekarze:</h3>
+		<form id="doctors" action="{% url 'chrobry:data_view'%}">
+		<input  list="doctor_datalist" name="doctor_choosment">
+			<datalist id="doctor_datalist">
+				{%for doctor in doctor_list%}
+				<option value="{{doctor.name}} {{doctor.last_name}}"></option>
+				{%endfor%}
+			</datalist>
+		<input type="submit" value="Wybierz">
+		</form>
+		<h3> Pacjęci:</h3>
+		<form id="patients" action="{% url 'chrobry:data_view'%}">
+		<input  list="patient_datalist" name="patient_choosment" >
+			<datalist id="patient_datalist">
+				{%for patient in patient_list%}
+				<option value="{{patient.NFZ_ID}}"></option>
+				{%endfor%}
+			</datalist>
+		<input type="submit" value="Wybierz"></form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button><a class="go_back_button" href="/">go back</a></button>
