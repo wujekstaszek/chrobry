@@ -1,5 +1,5 @@
 django
 gunicorn
 django-heroku
-neomodel==3.3.2
+neomodel
 django-neomodel

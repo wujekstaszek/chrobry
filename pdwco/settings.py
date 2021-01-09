@@ -28,6 +28,7 @@ DEBUG = True
 
 import os
 NEOMODEL_NEO4J_BOLT_URL = os.environ.get('NEO4J_BOLT_URL', 'bolt://u7morgala:297892@149.156.109.37:7687')
+NEOMODEL_MAX_POOL_SIZE = 50
 NEOMODEL_ENCRYPTED_CONNECTION = False
 
 # Application definition
